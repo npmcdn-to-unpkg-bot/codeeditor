@@ -1,0 +1,130 @@
+
+<div class="class-class-style">
+  <p>
+      Python use also object-oriented concept along function oriented programming(like c language).Aslike java, python will not be strickly following the 
+      object-oriented programming concept. Generally python use  <oops></oops> for handling of data group state and the behavior.We will be seeing the 
+     <oops></oops>s inheritances or spectical method.<br>
+     <div class="alert alert-info">a new method has been introduce in python which called as magic method, decorators and metaclasses.<br> <p>This is a link about  the 
+       <b>magic method</b>     click  <a href="http://www.rafekettler.com/magicmethods.html">here</a>.
+     </div>
+     Python has two major version 2.xx and 3.xx.
+     Does it have any major difference in <oops></oops> conecpts.Yes it have.The <oops></oops> has been imporved on python 3.xx.This does not mean that 
+     the python 2.xx is weak.Few concept has imporved.<br>
+     Python's class  syntax<br>
+     <div class="well">
+         <code>&gt;&gt;&gt;</code><code style="color:blue;">class</code> class_name(base_class):<br>
+         <code>...</code> statment<br>
+         <div class="alert alert-info">
+         	<code object-explain></code> is the base class of python.Every object in python is derived from the <code object-explain></code> type.
+         </div>
+         <div class="well">
+         	<code>&gt;&gt;&gt;</code><code style="color:blue;">class</code> derive_class(<code object-explain></code>): <br>
+         	<code>...</code> statment<br>
+         </div>
+     </div>
+       <code>self</code> is a keyword in python for class members(variables ) and class method the <code>self</code> must be present
+       (atleast as a single argument).
+    <div class="alert alert-warning">
+        <p>
+         	Another example defining of class by without using of the <code>self</code> keyword. But it is not recommened for the developemnt.
+        </p>
+    </div>
+    <div class="class-style-private">
+        <h3>Data hiding.:</h3>
+         <p>
+           Private  members(variable or method) of class  in python  , they are declare by (<code>_</code>) (single  underscore as <code style="color:violate;">weak private</code>) and (<code>_ _</code>)({no spaces}double underscore as <code style="color:violate">strong private</code>).
+         </p>
+        <p class="alert alert-danger">
+          You should know that private variable can be still accessed by this syntax.
+         <br>
+         <code>_className_ _MethodOrVariableName</code>.
+        </p>
+      </div>
+      <div class="class-style-docstring">
+        <p>
+         The docstring(document string) it is best and good practice if the docstring is written on the begining of the class.
+         This docstring can be access simple by using <code>_ _doc_ _</code> a magic method.<br>
+         <code>_ _get_ _</code> and <code>_ _set_ _</code> are a magic method. Usually python access the attributes with this method.	
+        </p>
+      </div>
+      <div class="class-style-magic_method">
+       <h3> Important magic methods:</h3>
+        <p>
+          On inherits of a class in python <code>_ _init_ _</code>(initialization) is called.These magic method are all option-one, but they are very useful.<br>
+          <code>_ _dict_ _</code> will be containing attribute of the class.You can use this method for accinging the value for a variable
+        </p>
+        <table class="table table-bordered table-hover ">
+          <thead>
+            <tr>
+              <td>method name</td>
+
+              <td>method description</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>_ _class_ _</td>
+              <td>this method will be displaying the current class name.</td>
+            </tr>
+            <tr>
+              <td>_ _new_ _</td>
+              <td> to create a new instance of class.<code style="color:browen">class_name._ _new_ _(cls,*args,**kwds).</code>
+               <br>
+              <code>note:</code>do not use <code>self</code> on this one and this can be used to achive singleton patten(patten are a style of coding for specific purpose their are differnt type pattens).
+              </td>
+            </tr>
+            <tr>
+              <td>_ _del_ _</td>
+              <td>like destructor but a rare use because the python automaticaly mamages the garbage collection of objects.s</td>
+            </tr>
+            <tr>
+              <td>_ _repr_ _,<br> _ _str_ _,<br> _ _unicode_ _</td>
+              <td>(this last one will be main use in python 2.x).for Representation as string.repr(x) is a in-built function</td>
+            </tr>
+            <tr>
+              <td>_ _lt_ _,<br> _ _le_ _,<br> _ _gt_ _,<br> _ _ge_ _,<br> _ _eq_ _,<br> _ _ne_ _, <br> _ _cmp_ _</td>
+              <td>mainly for compare with other objects.</td>
+            </tr>
+            <tr>
+              <td>_ _hash_ _</td>
+              <td>return the hash of the particular class <code>hash(x)</code> a in-built function.</td>
+            </tr>
+            <tr>
+              <td>_ _add_ _,<br> _ _mul_ _,<br> _ _radd_ _, <br> _ _rmul_ _,</td>
+              <td>some of the function for the opration.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="class-style-access">
+      <h3> Attributes of instance objects:</h3>
+       <p>
+        The class members are accessed by <code>.</code>(dot).Like this one <code>class_name.method1()</code>.
+       </p>
+      </div>
+      <div class="class-style-mro">
+        <h3>Method Resolution Order and base keyword:</h3>
+         <p> 
+           This Section will be dealing with a magic method and How the python search the attibutes on multiple inheritances.	
+           I am sure this link will be helpfull click <a href="http://www.python.org/2.3/mro.html">here</a>.<br>
+           Below example will be explaning the overriding the attributes.
+        </p>
+      </div>
+      <div>
+        <h3>Non overridding methods:</h3>
+       <p>
+
+          This is simple explanation about the static and class instances.<br>
+          <h4>static:</h4>
+          Basically a static method in java and other common language will be intiallize fist and it cannot be inherited.More or less it is equal in python.There is no need for the <code>self</code> or <code>cls</code> keywords as a fist parameters.The in-built function <code>staticmethod</code> will be used for the static decalaration.<br>
+          <code>making singleton object</code>(call this object anywhere (mostly) will be giving same result)<br>
+          eg: in a computer getting the ip address using python or java or cmd etc will be giving the same ip address.
+          <h4>class method:</h4>
+          In this we will be using the keyword <code>cls</code> as a first parameter.This also uses a in-built function <code>classmethod</code>.
+          <br>
+          <code>use:</code>a class method is a method you can call on a class or on any instance of the class.
+       </p>
+      </div>
+
+  </p>
+</div>

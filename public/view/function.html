@@ -1,0 +1,434 @@
+ <h3 id="defaultargument">Default Argument Values:</h3>
+     <p class="well">   <!---<script src="http://ideone.com/e.js/CY8fA1" type="text/javascript" ></script> --></p>
+   </p>
+   <p class="alert alert-danger">
+     The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes. For example, the following function accumulates the arguments passed to it on subsequent calls:
+   </p>
+   <p class="well">
+     <!--<script src="http://ideone.com/e.js/LJKXKJ" type="text/javascript" ></script>-->
+   </p>
+   <h3 id="keywordargument">Keyword Arguments:</h3>
+    In a function call, keyword arguments must follow positional arguments.
+     All the keyword arguments passed must match one of the arguments accepted by the function.
+   <p>
+   </p>
+   <p class="well">
+     <!---
+     <script src="http://ideone.com/e.js/3QBfO3" type="text/javascript" ></script>
+   -->
+   </p>
+    see this...........
+   <p class="well">
+    <code>&gt;&gt;&gt;</code>  def function(a):<br>
+    <code>...</code>     pass<br>
+    <code>...</code><br>
+    <code>&gt;&gt;&gt;</code> function(0, a=0)<code style="color:green">#passing two argument is not allowed</code><br>
+<code>Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in ?,<br>
+TypeError: function() got multiple values for keyword argument 'a'</code>
+  <code>&gt;&gt;&gt;</code><code style="color:green">#pass single argument</code> 
+
+   </p>
+   <p>This is a way of passing multiple arguments in here there are been three type are used
+     <br> 1.normal as function passing arguments
+     <br> 2.list
+     <br> 3.directions
+   which last two are python datat types</p>
+   <p class="well">
+     <script src="http://ideone.com/e.js/pJKWrL" type="text/javascript" ></script>
+   </p>
+   <p><h3 id="lamda">lamda expression</h3>
+     Anonymous functions (means a function that has no name or a function with no direct calling ).We might think what is the
+       use of the function with out nameing.Guess again
+      <pre>
+<code style="color:red">&gt;&gt;&gt;</code> def increament(a):
+<code style="color:red">...</code>    return lamda x:x + a
+<code style="color:red">&gt;&gt;&gt;</code>f = increament(34)
+<code style="color:red">&gt;&gt;&gt;</code>f(2)
+<code style="color:red">...</code>36
+      </pre>
+      <p> Try not to use a function with like this because that in
+         <code data-toggle="tooltip" data-placement="top" title="" data-original-title="a quick interaction services">Interactive session</code>
+         or in <code data-toggle="tooltip" data-placement="top" title="" data-original-title="IDE">IDE</code>
+         because it will bring the unexpected errors.
+      </p>
+   </p>
+   <p><h3 id="documentstring">Documentation String </h3>
+     <p>
+       This document string is used to display the aurthur content about the function desception how they work and their property.
+       This is a optional one.<br>
+       <p class="alert alert-info">If there are more lines in the documentation string, the second line should be blank, visually separating the summary from the rest of the description.
+         The following lines should be one or more paragraphs describing the object’s calling conventions, its side effects, etc.
+       </p>
+       <p class="well">
+         <!---<script src="http://ideone.com/e.js/1ZxM6S" type="text/javascript" ></script>
+     -->
+       </p>
+       This example might not work very well in <code data-toggle="tooltip" data-title="Online IDE with multilanguage">ideone</code>
+       please use in IDE and not in <code data-toggle="tooltip" data-placement="top" title="" data-original-title="a quick interaction services">Interactive session</code>
+     </p>
+   </p>
+   <p><h3 id="functionannotation">Function Annotations</h3>
+     Rule:<a href="https://www.python.org/dev/peps/pep-0484">PEP 484</a><br>
+     It is used for the giving the addition information about the data type which is return or passed.Annotations are stored in the __annotations__ attribute of the function as a dictionary and have no effect on any other part of the function.
+     <p class="well">
+       <!--
+        <script src="http://ideone.com/e.js/ug5X0G" type="text/javascript" ></script>
+      -->
+     </p>
+
+   </p>
+   <p>
+     <h2>Data Structure:</h2>
+       <h3 id="list">List:</h3>
+        <p>We have seen a list example in aboue.</p>
+        <p class="well">
+        <!---
+         <script src="http://ideone.com/e.js/1MNiof" type="text/javascript" ></script>
+        -->
+        </p>
+        <p> List object can be used as stack and queue which is a  data structure.(for stack see the previous example of list)</p>
+      <p>  <h4>Queue:</h4>
+         The queue is data structure in concept of First in First out.For efficitve implementation and fast performation. We wil be useing
+       <a href="#">collections.deque</a>. The <code>from</code> and <code>import</code> are keyword for importing other modules.
+       <p class="well">
+         <t-a></t-a><code style="color:orange">from</code> collections <code style="color:orange">import</code> deque<br>
+          <t-a></t-a>q = deque(["ashaf","jawahar","karthi","muthu"])<br>
+          <t-a></t-a>q = append("hello world")<br>
+          <t-a></t-a>q.popleft()<br>
+           <t-d></t-d>'ashaf'<br>
+            ........................................................................<br>
+          <code>&gt;&gt;&gt;</code>q<br>
+          <code>...</code>deque(['hello world'])<br>
+       </p>
+      </p>
+        <table class="table table-bordered table-hover ">
+          <thead>
+            <tr>
+              <td>Funtion Name:</td>
+              <td>List of funtion name's uses</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>list.append(x)</td>
+              <td>Add an item to the end of the list. Equivalent to a[len(a):] = [x].</td>
+            </tr>
+            <tr>
+              <td>list.extend(L) </td>
+              <td>Extend the list by appending all the items in the given list. Equivalent to a[len(a):] = L.</td>
+            </tr>
+            <tr>
+              <td>list.insert(i, x) </td>
+              <td>Insert an item at a given position. The first argument is the index of the element before which to insert, so a.insert(0, x)
+                inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).</td>
+            </tr>
+
+            <tr>
+              <td>list.remove(x) </td>
+              <td>Remove the first item from the list whose value is x. It is an error if there is no such item.</td>
+            </tr>
+
+            <tr>
+              <td>list.pop([i]) </td>
+              <td>Remove the item at the given position in the list, and return it.
+                If no index is specified, a.pop() removes and returns the last item in the list.</td>
+            </tr>
+
+            <tr>
+              <td>list.clear() </td>
+              <td>Remove all items from the list. Equivalent to del a[:].</td>
+            </tr>
+
+            <tr>
+              <td>list.index(x)  </td>
+              <td>Return the index in the list of the first item whose value is x. It is an error if there is no such item.</td>
+            </tr>
+
+            <tr>
+              <td>list.count(x)  </td>
+              <td>Return the number of times x appears in the list.</td>
+            </tr>
+
+            <tr>
+              <td> list.sort(key=None, reverse=False) </td>
+              <td>Sort the items of the list in place.</td>
+            </tr>
+
+            <tr>
+              <td> list.reverse()  </td>
+              <td>Reverse the elements of the list in place.</td>
+            </tr>
+
+            <tr>
+              <td> list.copy()  </td>
+              <td>Return a shallow copy of the list. Equivalent to a[:].</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><code>map()</code> is a in-built function that will be using to map the same function or operation for all the elements in list.</p>
+        <p class="well">
+          <!--
+          <script src="http://ideone.com/e.js/OF0BkL" type="text/javascript" ></script>
+          -->
+        </p>
+        <p>Example:1(this might hard for the first time, this is a compression and advantage of python in optimation of code structure)</p>
+        <p class="well">
+          <t-a></t-a>matrix = [<br>
+          <code>...</code>  [1, 2, 3, 4],<br>
+            <code>...</code>   [5, 6, 7, 8],<br>
+           <code>...</code>  [9, 10, 11, 12],<br>
+         <code>...</code> ]<br>
+         <code>...</code><br>
+       <code style="color:red">&gt;&gt;&gt;</code>[ <br>
+       <code>...</code>[row[i] for row in matrix] <br>
+       <code>...</code>for i in range(4)<br>
+       <code>...</code>]<br>
+       <code>...</code><br>
+       <code>...</code><br>
+       <code>...</code>[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
+        </p>
+        <p><code>del</code> is a key word that is used to delect the variable or it conent completely.In out last example we use a variable
+        as name <code data-toggle='tooltip' data-title='this is a variable not a keyword'>"matrix"</code></p>
+   <p class="well">
+     <t-a></t-a><code style="color:green">del</code>matrix<br>
+     <t-d></t-d>[]
+   </p>
+   <div id="tuples">
+      <h3>Tuples and sets</h3>
+   </div>
+   </p>
+       <p>String the change of the python form 2.x.x to 3.x.x was with main aim of lot of change
+      but one of the main change is the change ascii to utf formate.
+    </p>
+    <p class="well">
+      <code>&gt;&gt;&gt;</code>s = "hello"<br>
+      <code>&gt;&gt;&gt;</code>
+      <code style="color:green">str</code>(s)<br>
+      <code>...</code>'hello'
+      <br>
+      <code>&gt;&gt;&gt;</code>
+      <code style="color:green">str</code>(1/7)<br>
+      <code>...</code>'0.14285714285714285'<br>
+      <code>&gt;&gt;&gt;</code>
+      <code style="color:green">repr</code>(s)<br>
+      <code>...</code>'  "hello"  '<br>
+    </p>
+     <table class="table table-bordered table-hover " >
+       <thead>
+         <tr>
+           <td>Funtion Name:</td>
+           <td>List of funtion name's uses</td>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>str()</td>
+           <td>the function meant to return represetnation human readable.
+            This will be not nessary in most case but when using <code>repr()</code> function this function
+          will be useful.</td>
+         </tr>
+         <tr>
+           <td>repr()</td>
+           <td>this function will be making string that interpreter will be reading directly.</td>
+         </tr>
+         <tr>
+           <td>str.formate()</td>
+           <td>if your familiur with c language that the <code>printf()</code>will be haveing a formate to display the output.</td>
+         </tr>
+         <tr>
+           <td>str.rjust()</td>
+           <td>method of string objects, which right-justifies a string in a field of a given width by padding it with spaces on the left.</td>
+         </tr>
+         <tr>
+           <td>str.ljust()</td>
+           <td>method of string objects, which left-justifies a string in a field of a given width by padding it with spaces on the right.</td>
+         </tr>
+         <tr>
+           <td>str.zfill()</td>
+           <td>which pads a numeric string on the left with zeros. It understands about plus and minus signs.</td>
+         </tr>
+         <tr>
+           <td></td>
+           <td></td>
+         </tr>
+
+       </tbody>
+    </table>
+    <p class="well">
+      <code>&gt;&gt;&gt;</code>s = <code style="color:orange">'12'</code>.zfill(5)<br>
+      <code>...</code>'00012'<br>
+      <code>&gt;&gt;&gt;</code><code style="color:blue">len</code>(s)<br>
+      <code>...</code>5<br>
+      <code>&gt;&gt;&gt;</code>s = <code style="color:orange">'-3.14'</code>.zfill(5)<br>
+      <code>...</code>'-003.14'<br>
+       <code>&gt;&gt;&gt;</code>t = <code style="color:orange">'3.14159265359'</code>.zfill(5)<br>
+       <code>&gt;&gt;&gt;</code><code style="color:blue">len</code>(t)<code style="color:green">#this 13 because the limite of t is excessied for 5</code><br>
+       <code>....</code>13<br>
+       <code>&gt;&gt;&gt;</code><code style="color:blue">print</code>(<code style="color:orange">'We are the {} who say "{}!"'</code>.format(<code style="color:orange">'knights'</code>, <code style="color:orange">'Ni'</code>))<br>
+       <code>....</code>We are the knights who say "Ni!"<br>
+       <code>&gt;&gt;&gt;</code><code style="color:blue">print</code>(<code style="color:orange">'{0} and {1}\n::{1} and {0}'</code>.format(<code style="color:orange">'spam'</code>, 'eggs'))<br>
+        <code>....</code>spam and eggs<br>
+        <code>....</code>::eggs and spam<br>
+       <code>&gt;&gt;&gt;</code><code style="color:blue">print</code>(<code style="color:orange">'{0} and {}'</code>.format(<code style="color:orange">'spam'</code>, 'eggs'))<code color="green">#</code>
+
+       <code style="color:green">print('{} and {0}'.format('spam', 'eggs'))//both the example will be casuing error....</code><br>
+       <code>
+         Traceback (most recent call last):<br>
+     File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+   ValueError: cannot switch from automatic field numbering to manual field specification<br>
+       </code><br>
+       <code>&gt;&gt;&gt;</code><br>
+       <code>&gt;&gt;&gt;</code><code style="color:blue">print</code>(<code style="color:orange">'The story of {0}, {1}, and {other}.'</code>.format('Bill', 'Manfred',other='Georg'))<br>
+       <code>....</code>The story of Bill, Manfred, and Georg.
+       <code>
+         Traceback (most recent call last):<br>
+     File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+   ValueError: cannot switch from manual field  specification to automatic field numbering<br>
+       </code>
+       <code>&gt;&gt;&gt;</code><code style="color:blue">print</code>('%d'%45)<br>
+         <code>....</code>45<br>
+    </p>
+   <div id="reading_and_writing_files">
+     <p>
+      Syntax for the open the file for reading and writing is:<code style="color:orange">open</code>(filename,mode).
+      "filename" and  "mode" should be in string.mode are <code>"w"</code>:is a mode to write in the file,
+      <code>"r"</code>is a mode to read in the file,
+      <code>"a"</code>is a mode to append (adding the content in last),
+      <code>"r+"</code>is a mode to writing or for reading,
+      <code>"b"</code> is a binary mode.
+      <br>
+      <p>
+        In text mode, the default when reading is to convert platform-specific line endings (\n on Unix, \r\n on Windows) to just \n.
+        When writing in text mode, the default is to convert occurrences of \n back to platform-specific line endings.
+        This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in JPEG or EXE files.
+        Be very careful to use binary mode when reading and writing such files.
+      </p>
+     </p>
+   <p>
+     <code data-toggle="tooltip" data-title="it is a userdefine oject not keyword">f</code>
+     is file object.
+   </p>
+  <table class="table table-bordered table-hover ">
+    <thead>
+      <tr>
+        <td>Funtion Name:</td>
+        <td>List of funtion name's uses</td>
+      </tr>
+    </thead>
+    <tbody>
+       <tr>
+         <td>f.read() or f.read(size)</td>
+        <td>this is used for the reading the content of the file which is used to return
+            <code>string</code>or<code>bytes</code>default is read the full content (to end of file) </td>
+       </tr>
+       <tr>
+         <td>f.readline() </td>
+        <td>reads a single line from the file; a newline character (\n)</td>
+       </tr>
+       <tr>
+         <td>f.write()</td>
+        <td>writes the contents of string to the file, returning the number of characters written.</td>
+       </tr>
+       <tr>
+         <td>f.seek(position,postion)</td>
+         <td>used to move the pointer in file to a postion.the negataive value can also give to counter
+         from back of the file.</td>
+       </tr>
+       <tr>
+         <td>f.close()</td>
+         <td>it is used to close the connection between the file.</td>
+       </tr>
+     </tbody>
+    </table>
+    <p >
+
+      <code> with</code> is a keyword that is is used for a diffent pupose in python.That
+      are used to assignes a function or object  with variable or ananomues function for about a option number lines.
+    </p>
+    <p class="well">
+      <t-a></t-a><code style="color:blue">with</code> open(<code style="color:orange">'workfile'</code>, <code style="color:orange">'r'</code>) as f:<br>
+          <code style="padding-right:3px;">...</code>     read_data = f.read()
+
+    </p>
+
+  <!--            -->
+
+
+</div>
+<div>
+  <h3 id="jsonpy">structured data with json</h3>
+  <p>JSON is not a built-in data type in python.use
+    <code style="color:orange" data-toggle="tooltip" data-title="used to import model from one direction">import</code>json<br>
+    In both Python 2.x and 3.x you can call dump to do that,
+    but in 3.x the output must be a character stream, whereas 2.x expects a byte stream.
+  </p>
+  <table class="table table-bordered table-hover ">
+    <thead>
+      <tr>
+        <td>Funtion Name:</td>
+        <td>List of funtion name's uses</td>
+      </tr>
+    </thead>
+    <tbody>
+       <tr>
+         <td>json.dump()</td>
+         <td>simply serializes the object to a text file.</td>
+       </tr>
+       <tr>
+         <td>json.load()</td>
+         <td>simple deserializes the object from text file.</td>
+       </tr>
+     </tbody>
+    </table>
+</div>
+
+
+
+
+<div id="i/o" class="well">
+  <h3 > I/O function</h3>
+<p>
+  This is section we will be seeing the basic I/O part of python.This <code>print</code> is a function for printing the string and the argument
+  that are passed on the function.The input from console is <code>input</code>. the value getting from
+  the console is always <code>string</code> use <code>int</code>,<code>float</code> the are main primary data type
+  <br>
+   <p class="alert alert-danger">This functions will be for console purpose only</p>
+   <p class="well">
+     <code>&gt;&gt;&gt;</code>getInput=<code>input</code>()
+     <br>
+     <code>...</code>hello
+     <br>
+    <code>&gt;&gt;&gt;</code>
+    <code style="color:blue">print</code>
+    (<code style="color:orange">"this is the input functions output...",getInput</code>)
+    <br>
+    <code> ... </code>this is the input functions output...hello<br>
+    <code>&gt;&gt;&gt;</code>
+    <code style="color:blue">print</code>
+    (<code style="color:orange">"this is the input functions output..."+getInput</code>)
+    <br>
+      <code> ... </code>this is the input functions output...hello
+   </p>
+   <p class="alert alert-info">
+     <code>&gt;&gt;&gt;</code>
+     <code style="color:orange">"hello"</code>
+     +
+     <code style="color:orange">"world"</code>
+     <code style="color:green">#no space given</code>
+     <br>
+     <code>...</code>
+     <code style="color:black;">helloworld</code>
+     <br>
+     <code>&gt;&gt;&gt;</code>
+     <code style="color:orange">"hello"</code>
+     +
+     <code>4545</code>
+     <code style="color:green">#concat between the string and interger.</code>
+     <br>
+     <code>  File &lt;stdin&gt;, line 1, in &lt;module&gt;</code><br>
+<code>TypeError: Can't convert 'int' object to str implicitly</code>
+   </p>
+</p>
+</div>
+</div>

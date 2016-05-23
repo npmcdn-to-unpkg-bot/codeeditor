@@ -1,0 +1,151 @@
+<div class="class-exception-style">
+  <p>
+  	Python use the exception as handle error.The <code>Exception</code> is a base  for all exception in the built-in ecxeption and user define exceptions.Python can explicitly raise an exception by executing a <code>raise</code>.
+  	<div class="well">
+             
+       <code>&gt;&gt;&gt;</code><code>try:</code><br>
+        <code>...</code>statement</br>
+       <code>...</code><code>except Exceptions as targetNameSpace:</code>#<code style="color:green;">#except Exceptions , targetNameSpace#python 2.x</code> <br>
+        <code>...</code>statement</br>
+       <code>...</code><code>finally:</code><br>
+        <code>...</code>statement<code style="color:green;">#statmet will be executed compulsery</code></br>
+  	</div>
+  	The standard exception is explane in details click <a href="http://python.org/doc/peps/pep-0352/">here</a>
+  	The <code>try</code> is the begining of the exception handling. You can think as <code>if</code> condition as <code>try</code>, if there is an excption in <code>try</code> block then the statment in <code>except </code> block will be executed.This how the python use handles the exception, but if the <code>try</code>
+  	is executed and no error is occured, <code>except </code> block will be ignore completly.In <code>finally:</code> will be executed automatically if it is have any error or not.
+  	<div>
+     <h3>with statment:</h3>
+      <p>
+       <code>with</code> is a keyword in python.This keyword was intorduce on python 2.5.To use this word as like python 3.x in python 2.x.<br>
+       <code style="style:blue;">from</code> _ _future_ _ <code >import</code>with_statment <br>
+       by using this  import we will be able to use the <code style="color:blue;">with</code> on both the version.
+         	<div class="well">
+            <code>&gt;&gt;&gt;</code><code style="color:blue;" >with</code> expression as VariableName:<br>
+            <code>...</code>statement</br>
+            </div>
+            a simple example with the <code>with</code> statment in python.This like will be providing a good details click <a href="at http://
+www.python.org/peps/pep-0343.html">here</a>.
+            <div class="well">
+             <code>&gt;&gt;&gt;</code> <code style="color:blue;" >with</code>
+              open(<code style="color:orange;" >"FileName"</code>,<code style="color:orange;" >"r"</code>) as fp:</code><br>
+              <code>...</code>fp.close()</br>
+           </div>
+           <h4>Reason:</h4>
+           The real reason for going to the exception when an error is occure on outside of the <code>try</code><code>except </code> block the application will
+           be crash.This will not be plesent to the developer.This example is famous error and common in all language.A common point that <code>Traceback</code>
+           is object that is used for python error display.
+           <div class="well">
+            <code>&gt;&gt;&gt;</code> 1/0<br>
+            <code>...</code> <code>ZeroDivisionError: division by zero</code>
+            </div>
+      </p>
+  	</div>
+  	<div>
+     <h3>raise statment:</h3>
+     <p>
+        <code>raise</code> keyword will be used for raising the exception this may be user define or pre define.
+        <code>raise</code> exception1,exception2
+     </p >
+  	</div>
+  	   <table class="table table-bordered table-hover ">
+          <thead>
+            <tr>
+              <td>exception name</td>
+              <td>exception details</td>
+            </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>ArithmeticError</td>
+          <td>The base class for exceptions due to arithmetic errors (i.e., OverflowError,ZeroDivisionError, FloatingPointError)</td>
+         </tr>
+
+         <tr>
+          <td>LookupError</td>
+          <td>The base class for exceptions that a container raises when it receives an invalid key or index (i.e., IndexError, KeyError)</td>
+         </tr>
+
+         <tr>
+          <td>EnvironmentError</td>
+          <td>The base class for exceptions due to external causes (i.e., IOError, OSError,WindowsError)</td>
+         </tr>
+
+         <tr>
+          <td>
+           </td>
+          <td></td>
+         </tr>
+
+        </tbody>
+       </table>
+       <div class="alert alert-info">
+          This link will be containing the parent and child class of the exception Click <a href="http://ideone.com/C6g099" style="">here</a>.
+       </div>
+       <div>
+         <h3>Standard Exception Classes:</h3>
+  	   <table class="table table-bordered table-hover ">
+          <thead>
+            <tr>
+              <td>exception name</td>
+              <td>exception details</td>
+            </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>AssertionError</td>
+          <td>An assert statement failed.</td>
+         </tr>
+
+         <tr>
+          <td>AttributeError</td>
+          <td>An attribute reference or assignment failed.</td>
+         </tr>
+
+         <tr>
+          <td>FloatingPointError</td>
+          <td>A floating-point operation failed. Derived from ArithmeticError.</td>
+         </tr>
+
+         <tr>
+          <td>IOError</td>
+          <td>An I/O operation failed (e.g., the disk wasfull, a file wasnot found, or
+needed permissions were missing). Derived from EnvironmentError.</td>
+         </tr>
+
+         <tr>
+          <td>ImportError</td>
+          <td>An import statement 
+cannot find the module to import or cannot find a name specifically
+requested from the module.</td>
+         </tr>
+         </tbody>
+        </table>
+        The aboue are some standard exception in python.There are more standard exception....
+       </div>
+       <div class="well">
+          <code>&gt;&gt;&gt;</code><code style="color:blue;" >class</code> UserException(Exception):<br>
+          <code>...</code>pass 
+
+       </div>
+       This is the most simplest form in creating the user define exception on python.<br>
+       <code>Note:</code> I am using a Base class exception, it can have other like <code>   StandardError, NameError</code>.
+       <div class="alert alert-info">
+       Use logging module for the flexiable and good way <a href="https://docs.python.org/2/library/logging.html">logging module</a></div>
+       <div>
+         <h4>Assert Statement</h4>
+         <p>
+         The assert statement allows you to debugging code into a program.
+       <div class="well">
+          <code>&gt;&gt;&gt;</code><code style="color:blue;" >assert</code>  condition[,expression]<br>
+          <code>...</code>pass 
+
+       </div>
+       This assert function can be controll by command line. and <code>_ _debug_ _</code> this block of magic method can be use for debug with class
+       using <code>-O</code> on execution under command line argument.
+         
+         </p>
+       </div>
+  </p>
+
+</div>
+

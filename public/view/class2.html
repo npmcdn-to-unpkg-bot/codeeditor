@@ -1,0 +1,85 @@
+<div class="class-class-style">
+  <div class="class-style-decorators">
+     <h3>Decorators:</h3>
+     <p>
+        This is simple other version of <code>static</code> and <code>classmethod</code>.Instaed of using in-built function <code>staticmethod</code> or 
+        <code>classmethod</code>.</br>
+        <code>@classmethod</code> and <code>@staticmethod</code> are built-in function.But another suppressies that, this method can be used for other method
+        user define methods.
+        <div class="well">
+          <code>&gt;&gt;&gt;</code><code style="color:blue">def</code>show(f): <code style="color:green">#f is function as parameter</code> 
+          <br>
+
+          <code>....</code>if f._ _doc_ _:<br>
+          <code>....</code><code style="color:black;"><code style="color:blue">print</code> ('%s: %s' % (f._ _name_ _, f._ _doc_ _) )</code><br>
+          <code>....</code><code style="color:blue">else:</code><br>
+          <code>....</code><code style="color:black;"><code style="color:blue">print</code>('%s: No docstring!' % f._ _name_ _)</code><br>
+          <code>....</code>return f<br>
+          <code>&gt;&gt;&gt;</code>@show<code style="color:green">#for show function f1 will be automatically passed as argument to function consider like this"show(f1)"</code> 
+          <br>
+          <code>...</code>def f1( ): "a docstring"
+        </div>
+     </p>
+  </div>
+  <div>
+    <h4>Metaclasses:</h4>
+    <p>
+    This part is little advance for the first time reader so if you want to skip or you can read it under your wish.<br>
+    <code>_ _metaclass_ _</code> also have metaclass, a class’s behavior is mostly determined by the class’s metaclass.
+     <div class="well">
+        <script  src="http://ideone.com/e.js/yrg57n" type="text/javascript" ></script> 
+     </div>
+     The basic idea is to pass on behaviour of one class to another class.More advance example is in net.
+    </p>
+
+  </div>
+  <div>
+   <h3>Super:</h3>
+   <p>
+      This <code>super()</code> keyword will be used for interactiveing the base class directly.
+        <div class="well">
+          <code>&gt;&gt;&gt;</code><code style="color:blue">class</code>c1(object): <code style="color:green">#base class</code> 
+          <br>
+
+          <code>....</code>def show(self):<br>
+          <code>....</code><code style="color:blue">print</code>(12345678)<br>
+
+         <code>&gt;&gt;&gt;</code><br>
+         <code>&gt;&gt;&gt;</code><br>
+           <code>&gt;&gt;&gt;</code><code style="color:blue">class</code>c2(c1):<code style="color:green">#derive class</code> <br>
+          <code>....</code>def show(self):<br>
+          <code>....</code><code style="color:blue">super()</code>.show()<code style="color:green">#output:   12345678</code> <br>
+
+         <code>&gt;&gt;&gt;</code><br>
+         <code>&gt;&gt;&gt;</code><br>
+
+           <code>&gt;&gt;&gt;</code><code style="color:blue">class</code>c3(c2):<code style="color:green">#derive class</code> <br>
+          <code>....</code>def show(self):<br>
+          <code>....</code><code style="color:blue">super()</code>.show()<code style="color:green">#output:   12345678</code> <br>
+
+
+          <code>&gt;&gt;&gt;</code>c<br>
+          <code>&gt;&gt;&gt;</code><br>
+
+           <code>&gt;&gt;&gt;</code><code style="color:blue">class</code>c4<code style="color:green">#another base class</code> <br>
+          <code>....</code>def show(self):<br>
+          <code>....</code><code style="color:blue">print</code>(987654321)<code style="color:green"></code> <br>
+
+
+          <code>&gt;&gt;&gt;</code><br>
+          <code>&gt;&gt;&gt;</code><br>
+          <code>&gt;&gt;&gt;</code><code style="color:green"># changing the base at the run time</code><br>
+          <code>&gt;&gt;&gt;</code>c3()._ _base_ _(c4)<br>
+           <code>....</code>c3.show()<code style="color:green">#output:   987654321</code> <br>
+
+        </div>
+        Python use <code>MRO(Method Resolution Order) algorithum</code> to locate the base class.This algorithum main use <code>left-to-right, depth-first order</code>But in the multiple inheritance class it mainly uses <code>Direct acyclic grapy</code> this might cause looking of attribute for more than one time.	There is a
+        problem with <code>left-to-right, depth-first order</code>this fools the compiler by looking the attibute for multipe inheritance in wrong dirction.But there is imporved <code>MRO algorithum</code> current avialable in finding the attributes of a multiple class.
+        <br>
+        This link contains the details of the MRO algothum of python 2.xx and python 3.xx.
+        <a href="http://www.python.org/2.3/mro.html">here</a>
+
+   </p>
+  </div>
+
+</div>
